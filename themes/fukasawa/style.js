@@ -44,7 +44,7 @@ const Style = () => {
     color: #666666; /* 文字颜色变浅 */
     border-left: 4px solid #ccc; /* 左侧添加灰色竖线 */
     padding-left: 12px; /* 让内容稍微内缩 */
-    padding-top：28px; /* 让上面留有空行 */
+    padding-top：26px; /* 让上面留有空行 */
     padding-bottom：14px；
     margin: 12px 12px; /* 上下增加间距 */
     line-height: 1;

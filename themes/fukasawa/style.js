@@ -36,14 +36,16 @@ const Style = () => {
     color: #333333; /* 颜色变深一点，避免太浅看不清 */
     }
 
+
     /* GPT帮我修改的  修改引用的样式 */
     .notion-quote {
-    font-size: 18px; /* 字体大小 */
+    font-size: 14px; /* 字体大小 */
     font-style: italic; /* 让字体变斜 */
     color: #666666; /* 文字颜色变浅 */
     border-left: 4px solid #ccc; /* 左侧添加灰色竖线 */
     padding-left: 12px; /* 让内容稍微内缩 */
-    margin: 16px 0; /* 上下增加间距 */
+    margin: 10px 5px; /* 上下增加间距 */
+    line-height: 1.4;
     }
 
 

@@ -25,11 +25,12 @@ const Style = () => {
     
 
     /* GPT帮我修改的 公告内容字体大小 */
-    #announcement-wrapper .notion-text {
-    font-size: 20px; /* 你可以改成更大的，比如 22px */
-    font-weight: bold;
-    text-align: center; /* 让公告内容居中 */
+    #announcement-content {
+    display: block !important; /* 确保公告内容显示 */
+    font-size: 18px; /* 你可以改大一点 */
+    color: #333; /* 调整颜色让它更清晰 */
     }
+
 
     /* 隐藏公告标题，但保留公告内容 */
     #announcement-wrapper div:first-child {

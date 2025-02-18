@@ -11,7 +11,7 @@ import { Transition } from '@headlessui/react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { createContext, useContext, useEffect, useRef } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import ArticleDetail from './components/ArticleDetail'
 import ArticleLock from './components/ArticleLock'
 import AsideLeft from './components/AsideLeft'
@@ -325,7 +325,6 @@ export {
  * 以下是GPT帮我写的 「回到顶部」按钮
  */
 
-import { useEffect, useState } from 'react'
 
 const BackToTop = () => {
   const [show, setShow] = useState(false)

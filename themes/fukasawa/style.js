@@ -33,7 +33,17 @@ const Style = () => {
     #announcement-content {
     display: block !important; /* 确保公告内容不会被隐藏 */
     font-size: 18px; /* 字体大小，可以调整 */
-    color: #333; /* 颜色变深一点，避免太浅看不清 */
+    color: #333333; /* 颜色变深一点，避免太浅看不清 */
+    }
+
+    /* GPT帮我修改的  修改引用的样式 */
+    .notion-quote {
+    font-size: 18px; /* 字体大小 */
+    font-style: italic; /* 让字体变斜 */
+    color: #666666; /* 文字颜色变浅 */
+    border-left: 4px solid #ccc; /* 左侧添加灰色竖线 */
+    padding-left: 12px; /* 让内容稍微内缩 */
+    margin: 16px 0; /* 上下增加间距 */
     }
 
 

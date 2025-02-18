@@ -29,7 +29,7 @@ const Style = () => {
     #announcement-wrapper div:first-child {
     display: none !important;
     }
-
+    
     #announcement-content {
     display: block !important; /* 确保公告内容不会被隐藏 */
     font-size: 18px; /* 字体大小，可以调整 */
@@ -44,7 +44,9 @@ const Style = () => {
     color: #666666; /* 文字颜色变浅 */
     border-left: 4px solid #ccc; /* 左侧添加灰色竖线 */
     padding-left: 12px; /* 让内容稍微内缩 */
-    margin: 10px 5px; /* 上下增加间距 */
+    padding-top：28px; /* 让上面留有空行 */
+    padding-bottom：14px；
+    margin: 12px 12px; /* 上下增加间距 */
     line-height: 1;
     }
 

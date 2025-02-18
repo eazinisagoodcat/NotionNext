@@ -352,7 +352,7 @@ const BackToTop = () => {
       className={`fixed bottom-10 right-10 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity ${
         show ? 'opacity-100' : 'opacity-0'
       }`}>
-      ↑ 回到顶部
+      ↑ 
     </button>
   )
 }

@@ -319,3 +319,42 @@ export {
   LayoutTagIndex,
   CONFIG as THEME_CONFIG
 }
+
+
+/**
+ * 以下是GPT帮我写的 「回到顶部」按钮
+ */
+
+import { useEffect, useState } from 'react'
+
+const BackToTop = () => {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShow(true)
+      } else {
+        setShow(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-10 right-10 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity ${
+        show ? 'opacity-100' : 'opacity-0'
+      }`}>
+      ↑ 回到顶部
+    </button>
+  )
+}
+
+export default BackToTop

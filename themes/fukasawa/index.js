@@ -91,6 +91,7 @@ const LayoutBase = props => {
                 <AdSlot type='native' />
               </div>
             </div>
+           <BackToTop />
           </main>
         </div>
 

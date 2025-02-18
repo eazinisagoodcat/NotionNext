@@ -21,13 +21,27 @@ const Style = () => {
         margin-bottom: .5rem;
     }
 
+
+    
+
     /* GPT帮我修改的 公告内容字体大小 */
     #announcement-wrapper .notion-text {
     font-size: 20px; /* 你可以改成更大的，比如 22px */
     font-weight: bold;
     text-align: center; /* 让公告内容居中 */
-    display: none;/* 不显示公告两个大字 */
     }
+
+    /* 隐藏公告标题，但保留公告内容 */
+    #announcement-wrapper div:first-child {
+    visibility: hidden; /* 让「公告」两个字不可见，但不影响布局 */
+    height: 0; /* 避免占空间 */
+    }
+    #announcement-wrapper div:first-child i {
+    display: none; /* 隐藏喇叭图标 */
+    }
+
+
+
     
     /* 大屏幕（宽度≥1024px）下显示3列 */
     @media (min-width: 1024px) {

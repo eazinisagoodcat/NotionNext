@@ -7,12 +7,14 @@
 const Style = () => {
   return <style jsx global>{`
     // 底色
-    body{
-        background-color: #eeedee;
+    body {
+         background-color: rgba(238, 237, 238, 0.4); /* 40% 透明度 */
     }
-    .dark body{
-        background-color: black;
+
+    .dark body {
+         background-color: rgba(0, 0, 0, 0.4); /* 40% 透明度的黑色 */
     }
+
     
     /* fukasawa的首页响应式分栏 */
     #theme-fukasawa .grid-item {
@@ -47,7 +49,8 @@ const Style = () => {
   padding-top: 26px !important;
   padding-bottom: 14px !important;
   margin: 12px 12px !important;
-  line-height: 1 !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.05em !important;
   }
 
 

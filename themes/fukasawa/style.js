@@ -8,7 +8,7 @@ const Style = () => {
   return <style jsx global>{`
     // 底色
     html,body {
-         background: rgba(238, 237, 238, 0.4); /* 40% 透明度 */
+         background: rgba(228, 206, 255, 0.4); /* 40% 透明度 */
     }
 
     .dark html,body {

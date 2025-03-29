@@ -7,11 +7,11 @@
 const Style = () => {
   return <style jsx global>{`
     // 底色
-    body {
+    html,body {
          background: rgba(238, 237, 238, 0.4); /* 40% 透明度 */
     }
 
-    .dark body {
+    .dark html,body {
          background: rgba(0, 0, 0, 0.4); /* 40% 透明度的黑色 */
     }
 

@@ -352,7 +352,7 @@ const BackToTop = () => {
       className={`fixed bottom-10 right-10 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity ${
         show ? 'opacity-100' : 'opacity-0'
       }`}
-  style={{ zIndex: 1000 }} // 这里增加 z-index，使之附在其他元素的上层
+  style={{ zIndex: 9999, position: 'fixed' }}// 这里增加 z-index，使之附在其他元素的上层
   >
       ↑ 
     </button>

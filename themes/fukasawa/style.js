@@ -8,11 +8,11 @@ const Style = () => {
   return <style jsx global>{`
     // 底色
     body {
-         background-color: rgba(238, 237, 238, 0.4); /* 40% 透明度 */
+         background: rgba(238, 237, 238, 0.4); /* 40% 透明度 */
     }
 
     .dark body {
-         background-color: rgba(0, 0, 0, 0.4); /* 40% 透明度的黑色 */
+         background: rgba(0, 0, 0, 0.4); /* 40% 透明度的黑色 */
     }
 
     
@@ -43,7 +43,7 @@ const Style = () => {
   .notion-quote {
   font-size: 14px !important;
   font-style: italic !important;
-  color: #666666 !important;
+  color: #d9d9d9 !important;
   border-left: 4px solid #ccc !important;
   padding-left: 12px !important;
   padding-top: 26px !important;

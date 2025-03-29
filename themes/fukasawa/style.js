@@ -38,17 +38,17 @@ const Style = () => {
 
 
     /* GPT帮我修改的  修改引用的样式 */
-    .notion-quote {
-    font-size: 14px; /* 字体大小 */
-    font-style: italic; /* 让字体变斜 */
-    color: #666666; /* 文字颜色变浅 */
-    border-left: 4px solid #ccc; /* 左侧添加灰色竖线 */
-    padding-left: 12px; /* 让内容稍微内缩 */
-    padding-top: 26px; /* 让上面留有空行 */
-    padding-bottom: 14px；
-    margin: 12px 12px; /* 上下增加间距 */
-    line-height: 1;
-    }
+  .notion-quote {
+  font-size: 14px !important;
+  font-style: italic !important;
+  color: #666666 !important;
+  border-left: 4px solid #ccc !important;
+  padding-left: 12px !important;
+  padding-top: 26px !important;
+  padding-bottom: 14px !important;
+  margin: 12px 12px !important;
+  line-height: 1 !important;
+  }
 
 
 

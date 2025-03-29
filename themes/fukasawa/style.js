@@ -43,7 +43,7 @@ const Style = () => {
   .notion-quote {
   font-size: 14px !important;
   font-style: italic !important;
-  color: #d9d9d9 !important;
+  color: #a3a3a3 !important;
   border-left: 4px solid #ccc !important;
   padding-left: 12px !important;
   padding-top: 26px !important;

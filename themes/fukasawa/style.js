@@ -26,19 +26,6 @@ const Style = () => {
         break-inside: avoid-column;
         margin-bottom: .5rem;
     }
-#starry-sky-vixcity {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999 !important;
-    pointer-events: none;
-}
-html, body {
-    height: 100%;
-    overflow: visible !important;
-}
 
 
     /* GPT帮我修改的 公告内容字体大小 */

@@ -14,8 +14,6 @@ const Style = () => {
     .dark html,body {
          background: rgba(0, 0, 0, 0.4); /* 40% 透明度的黑色 */
          background: transparent !important; 
-        backdrop-filter: brightness(0.3); /* 让内容变暗 */
-
 
     }
 

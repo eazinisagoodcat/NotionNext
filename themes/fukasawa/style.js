@@ -14,6 +14,7 @@ const Style = () => {
     .dark html,body {
          background: rgba(0, 0, 0, 0.4); /* 40% 透明度的黑色 */
          background: transparent !important; 
+        backdrop-filter: brightness(0.3); /* 让内容变暗 */
 
 
     }
@@ -28,12 +29,7 @@ const Style = () => {
 
     #starry-sky-vixcity {
     position: fixed !important; /* 让它固定但覆盖整个页面 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* 确保覆盖整个视口 */
     z-index: 9999 !important;
-      pointer-events: none;
 }
     
 

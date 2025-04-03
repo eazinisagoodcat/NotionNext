@@ -31,12 +31,7 @@ const Style = () => {
 
     #starry-sky-vixcity {
     position: absolute !important; /* 让它不再固定在最上方 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 9999 !important;
-    pointer-events: none; /* 避免影响鼠标交互 */
     }
 
     

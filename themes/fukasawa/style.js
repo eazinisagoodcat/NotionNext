@@ -28,20 +28,20 @@ const Style = () => {
     }
 
 #starry-sky-vixcity {
-    position: fixed !important;  /* 保持固定位置 */
+    position: fixed !important;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100%;  /* 让 canvas 高度适应整个 body */
-    z-index: 9999 !important;
-    pointer-events: none;
+    width: 100vw;  /* 让宽度始终覆盖整个屏幕 */
+    height: auto !important;  /* 让高度自动适应内容 */
+    min-height: 100vh; /* 最小高度至少是视口高度 */
+    z-index: -1 !important;  /* 保证 canvas 在背景层 */
+    pointer-events: none; /* 防止 canvas 影响鼠标点击 */
 }
 html, body {
-    height: auto !important; /* 让 body 高度自动撑开 */
-    min-height: 100%;
+    min-height: 100vh; /* 确保 body 至少和视口一样高 */
+    height: auto !important;  /* 让 body 高度自动扩展 */
     overflow: visible !important;
 }
-    
 
     /* GPT帮我修改的 公告内容字体大小 */
     /* 隐藏“公告”两个字 */

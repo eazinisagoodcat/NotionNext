@@ -27,11 +27,18 @@ const Style = () => {
         margin-bottom: .5rem;
     }
 
-    #starry-sky-vixcity {
-    position: absolute !important; /* 让它不再固定在最上方 */
+#starry-sky-vixcity {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 9999 !important;
-    pointer-events: none; /* 避免影响鼠标交互 */
-
+    pointer-events: none;
+}
+html, body {
+    height: 100%;
+    overflow: visible !important;
 }
     
 

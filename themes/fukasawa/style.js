@@ -28,16 +28,17 @@ const Style = () => {
     }
 
 #starry-sky-vixcity {
-    position: fixed !important;
+    position: fixed !important;  /* 保持固定位置 */
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;  /* 让 canvas 高度适应整个 body */
     z-index: 9999 !important;
     pointer-events: none;
 }
 html, body {
-    height: 100%;
+    height: auto !important; /* 让 body 高度自动撑开 */
+    min-height: 100%;
     overflow: visible !important;
 }
     

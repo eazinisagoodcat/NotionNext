@@ -26,16 +26,19 @@ const Style = () => {
         break-inside: avoid-column;
         margin-bottom: .5rem;
     }
-#starry-sky-vixcity {
+【#starry-sky-vixcity {
     position: fixed !important;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh; /* 固定 canvas 的高度为视口高度 */
-    z-index: -1 !important;
+    height: 100vh;
+    z-index: 9999 !important;
     pointer-events: none;
-    object-fit: cover; /* 让 canvas 的内容保持比例填充整个区域 */
 }
+html, body {
+    height: 100%;
+    overflow: visible !important;
+}】
 
 
     /* GPT帮我修改的 公告内容字体大小 */

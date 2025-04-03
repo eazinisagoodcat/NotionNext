@@ -29,7 +29,10 @@ const Style = () => {
 
     #starry-sky-vixcity {
     position: fixed !important; /* 让它固定但覆盖整个页面 */
+    height: 100vh; /* 确保覆盖整个视口 */
     z-index: 9999 !important;
+    pointer-events: none; /* 避免影响鼠标交互 */
+
 }
     
 

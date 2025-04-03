@@ -27,6 +27,11 @@ const Style = () => {
         margin-bottom: .5rem;
     }
 
+    /* GPT让我改的使背景色透明的方法试一试 */
+
+    #starry-sky-vixcity {
+    z-index: 9999 !important;
+    }
 
     
 

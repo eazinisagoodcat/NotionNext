@@ -26,7 +26,15 @@ const Style = () => {
         margin-bottom: .5rem;
     }
 
-
+    #starry-sky-vixcity {
+    position: fixed !important; /* 让它固定但覆盖整个页面 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 确保覆盖整个视口 */
+    z-index: 9999 !important;
+      pointer-events: none;
+}
     
 
     /* GPT帮我修改的 公告内容字体大小 */

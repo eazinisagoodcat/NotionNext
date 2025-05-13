@@ -54,14 +54,7 @@ const BlogListScroll = ({ posts }) => {
   useEffect(() => {
     const startIndex = (page - 1) * postsPerPage;
     const endIndex = startIndex + postsPerPage;
-    //const postsToShow = posts.slice(startIndex, endIndex);
-
-    //以下是GPT写的代码
-    const sortedPosts = useMemo(() => {
-    return [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-    }, [posts]);
-    const postsToShow = sortedPosts.slice(startIndex, endIndex);
-    //GPT结束
+    const postsToShow = posts.slice(startIndex, endIndex);
     const columns = 3; // 假设有3列
 
     // 重新排列文章，保证列优先顺序

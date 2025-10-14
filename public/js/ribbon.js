@@ -1,4 +1,6 @@
 /* eslint-disable */
+return; // 彻底关闭背景特效
+
 /**
  * 创建连接点
  * @param config

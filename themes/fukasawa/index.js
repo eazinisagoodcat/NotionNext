@@ -9,9 +9,9 @@ import { useGlobal } from '@/lib/global'
 import { isBrowser } from '@/lib/utils'
 import { Transition } from '@headlessui/react'
 import dynamic from 'next/dynamic'
-import SmartLink from '@/components/SmartLink'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { createContext, useContext, useEffect, useRef } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import ArticleDetail from './components/ArticleDetail'
 import ArticleLock from './components/ArticleLock'
 import AsideLeft from './components/AsideLeft'
@@ -91,6 +91,7 @@ const LayoutBase = props => {
                 <AdSlot type='native' />
               </div>
             </div>
+           <BackToTop />
           </main>
         </div>
 
@@ -215,7 +216,6 @@ const LayoutArchive = props => {
  */
 const Layout404 = props => {
   const router = useRouter()
-  const { locale } = useGlobal()
   useEffect(() => {
     // 延时3秒如果加载失败就返回首页
     setTimeout(() => {
@@ -233,7 +233,7 @@ const Layout404 = props => {
             <div className='dark:text-gray-200'>
                 <h2 className='inline-block border-r-2 border-gray-600 mr-2 px-3 py-2 align-top'><i className='mr-2 fas fa-spinner animate-spin' />404</h2>
                 <div className='inline-block text-left h-32 leading-10 items-center'>
-                    <h2 className='m-0 p-0'>{locale.NAV.PAGE_NOT_FOUND_REDIRECT}</h2>
+                    <h2 className='m-0 p-0'>页面无法加载，即将返回首页</h2>
                 </div>
             </div>
         </div>
@@ -258,7 +258,7 @@ const LayoutCategoryIndex = props => {
         <div id='category-list' className='duration-200 flex flex-wrap'>
           {categoryOptions?.map(category => {
             return (
-              <SmartLink
+              <Link
                 key={category.name}
                 href={`/category/${category.name}`}
                 passHref
@@ -270,7 +270,7 @@ const LayoutCategoryIndex = props => {
                   <i className='mr-4 fas fa-folder' />
                   {category.name}({category.count})
                 </div>
-              </SmartLink>
+              </Link>
             )
           })}
         </div>
@@ -320,3 +320,43 @@ export {
   LayoutTagIndex,
   CONFIG as THEME_CONFIG
 }
+
+
+/**
+ * 以下是GPT帮我写的 「回到顶部」按钮
+ */
+
+
+const BackToTop = () => {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShow(true)
+      } else {
+        setShow(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-10 right-10 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity ${
+        show ? 'opacity-100' : 'opacity-0'
+      }`}
+  style={{ zIndex: 9999, position: 'fixed' }}// 这里增加 z-index，使之附在其他元素的上层
+  >
+      ↑ 
+    </button>
+  )
+}
+
+export default BackToTop
